@@ -15,6 +15,10 @@ public class Task2 {
      * *Добавить возможность выбора другой операции (сложение, вычитание, деление, умножение)
      */
     public static void main(String[] args) {
+        calculator();
+    }
+
+    public static String calculator() {
         Scanner scan = new Scanner(System.in);
         System.out.print("Введите значение переменной А: ");
         double operand1 = scan.nextDouble();
@@ -35,5 +39,6 @@ public class Task2 {
         } else {
             System.out.print("Введено некорректное значение!");
         }
+        return "Завершена работа калькулятора.";
     }
 }
