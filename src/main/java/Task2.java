@@ -15,7 +15,7 @@ public class Task2 {
      * *Добавить возможность выбора другой операции (сложение, вычитание, деление, умножение)
      */
     public static void main(String[] args) {
-        calculator();
+        System.out.println(calculator());
     }
 
     public static String calculator() {

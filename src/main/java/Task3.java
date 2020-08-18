@@ -29,11 +29,9 @@ public class Task3 {
         int N = scan.nextInt();
         String[] mas = new String[N];
         int x = 1;
-        for (int y = 0; y < N; ) {
+        for (int y = 0; y < N; x++, y++) {
             System.out.print("Введите слово в ячейку массива №" + x + ": ");
             mas[y] = scan.next();
-            x++;
-            y++;
         }
 
         int maxLength = 0;
