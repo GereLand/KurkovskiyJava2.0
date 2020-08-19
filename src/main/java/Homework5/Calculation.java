@@ -1,3 +1,5 @@
+package Homework5;
+
 public class Calculation {
 
     static double addition(double operand1, double operand2) {

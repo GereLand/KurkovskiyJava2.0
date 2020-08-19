@@ -1,3 +1,5 @@
+package Homework4;
+
 public class Task4_1 {
     /**
      * Задание №4
