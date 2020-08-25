@@ -59,7 +59,9 @@ public class Task6_1 {
 
     static void counting(List<String> countingFile) {
 
-        for (int index = 0, count = 0; index < countingFile.size(); index++) {
+        int index, count;
+
+        for (index = 0, count = 0; index < countingFile.size(); index++) {
 
             if (countingFile.get(index).equals(countingFile.get(index))) {
 
@@ -67,17 +69,17 @@ public class Task6_1 {
                     index++;
                     count++;
 
-                } while (index < countingFile.size() && countingFile.get(index).equals(countingFile.get(index - 1))); {
-
-                    if (count < countingFile.size()) {
-                        System.out.println("Слово \"" + countingFile.get(index - 1) + "\" встречается в тексте: " + count + " раз.");
-                        count = 0;
-                    } else {
-                        System.out.println("\n" + "------------------------------" + "\n");
-                        System.out.println("Слово \"" + countingFile.get(index - 1) + "\" встречается максимальное количество раз.");
-                    }
+                } while (index < countingFile.size() && countingFile.get(index).equals(countingFile.get(index - 1)));
+                {
+                    System.out.println("Слово \"" + countingFile.get(index - 1) + "\" встречается в тексте: " + count + " раз.");
+                    count = 0;
                 }
+
             }
         }
+
+        System.out.println("\n" + "------------------------------" + "\n");
+        System.out.println("Слово \"" + countingFile.get(index - 2) + "\" встречается максимальное количество раз.");
+
     }
 }
