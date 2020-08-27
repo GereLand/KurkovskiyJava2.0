@@ -43,7 +43,7 @@ public class Task6_1 {
 
     }
 
-    static List<String> sort(List<String> sortFile) {
+    static List<String> sort(ArrayList<String> sortFile) {
 
         String stringFile = sortFile.get(0);
         String[] strings = stringFile.split(" ");
@@ -57,29 +57,39 @@ public class Task6_1 {
         return sortFile2;
     }
 
-    static void counting(List<String> countingFile) {
+    static void counting(ArrayList<String> countingFile) {
 
-        int index, count;
+        int index, index2, count, count2;
+        String maxWord;
 
-        for (index = 0, count = 0; index < countingFile.size(); index++) {
+        for (index = 0, index2 = 0, count = 0, count2 = 0, maxWord = null; index < countingFile.size(); index++) {
 
-            if (countingFile.get(index).equals(countingFile.get(index))) {
+            if (index2 < countingFile.size()) {
 
                 do {
-                    index++;
+                    index2++;
                     count++;
 
-                } while (index < countingFile.size() && countingFile.get(index).equals(countingFile.get(index - 1)));
+                } while (index2 < countingFile.size() && countingFile.get(index2).equals(countingFile.get(index2 - 1)));
                 {
-                    System.out.println("Слово \"" + countingFile.get(index - 1) + "\" встречается в тексте: " + count + " раз.");
+                    System.out.println("Слово \"" + countingFile.get(index2 - 1) + "\" встречается в тексте: " + count + " раз.");
+
+                    if (count > count2 && index2 <= countingFile.size()) {
+
+                        count2 = count;
+                        maxWord = countingFile.get(index2);
+
+                    }
                     count = 0;
                 }
 
+            } else {
+                break;
             }
         }
 
         System.out.println("\n" + "------------------------------" + "\n");
-        System.out.println("Слово \"" + countingFile.get(index - 2) + "\" встречается максимальное количество раз.");
+        System.out.println("Слово \"" + maxWord + "\" встречается максимальное количество раз. (" + count2 + ") раз.");
 
     }
 }
