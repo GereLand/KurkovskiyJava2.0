@@ -22,10 +22,36 @@ public class Task4_1 {
             }
         }
 
+
+
 //        Для проверки правильности выполнения задания сделал вывод массива в консоль
 //        for (int value : randomArray) {
 //            System.out.println(value);
 //        }
+
+
+
+        // Поиск максимального отрицательного элемента
+        int maxNegative = -10;
+        for (int indexMaxNegative = 1; indexMaxNegative < randomArray.length; indexMaxNegative++) {
+            if (randomArray[indexMaxNegative] > maxNegative && randomArray[indexMaxNegative] < 0) {
+                maxNegative = randomArray[indexMaxNegative];
+            }
+        }
+        System.out.println("Максимальный отрицательный элемент: " + maxNegative);
+
+
+
+        // Поиск минимального положительного элемента
+        int minPositive = 10;
+        for (int indexMinPositive = 1; indexMinPositive < randomArray.length; indexMinPositive++) {
+            if (randomArray[indexMinPositive] < minPositive && randomArray[indexMinPositive] >= 0) {
+                minPositive = randomArray[indexMinPositive];
+            }
+        }
+        System.out.println("Минимальный положительный элемент: " + minPositive);
+
+
 
         int min = randomArray[0];
         int j2 = 0;
@@ -38,7 +64,10 @@ public class Task4_1 {
         randomArray[j1] = min;
         randomArray[j2] = max;
 
+
+
 //        Для проверки правильности выполнения задания сделал вывод массива в консоль
+//        System.out.println("\n" + "------------------------------");
 //        System.out.println();
 //        for (int value : randomArray) {
 //            System.out.println(value);
