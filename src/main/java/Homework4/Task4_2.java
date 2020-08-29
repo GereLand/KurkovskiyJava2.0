@@ -15,10 +15,12 @@ public class Task4_2 {
     3. Цена (Price);
     4. Уникальный параметр (Unique parameter).
      */
+
+    private static String[] Candys = {"Конфеты", "0.5", "1000", "Конфетное ассорти"};
+    private static String[] Jellybeans = {"Мармеладки", "0.3", "500", "Мармеладные мишки с колой"};
+    private static String[] Cookies = {"Печеньки", "1", "700", "Печеньки из коробки для хранения ниток"};
+
     public static void main(String[] args) {
-        String[] Candys = {"Конфеты", "0.5", "1000", "Конфетное ассорти"};
-        String[] Jellybeans = {"Мармеладки", "0.3", "500", "Мармеладные мишки с колой"};
-        String[] Cookies = {"Печеньки", "1", "700", "Печеньки из коробки для хранения ниток"};
 
         double weight = Double.parseDouble(Candys[1]) + Double.parseDouble(Jellybeans[1]) + Double.parseDouble(Cookies[1]);
         int price = Integer.parseInt(Candys[2]) + Integer.parseInt(Jellybeans[2]) + Integer.parseInt(Cookies[2]);

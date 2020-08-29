@@ -17,4 +17,5 @@ public class Calculation2 {
     static double division(double operand1, double operand2) {
         return operand1 / operand2;
     }
+    
 }
