@@ -1,24 +1,24 @@
 package Homework4;
 
-public class Jellybeans implements NewYearGift {
+public class Candies implements NewYearGift {
 
     @Override
     public String name() {
-        return "Мармеладки";
+        return "Конфеты";
     }
 
     @Override
     public double weight() {
-        return 0.3;
+        return 0.5;
     }
 
     @Override
     public int price() {
-        return 500;
+        return 1100;
     }
 
     @Override
     public String uniqueParameter() {
-        return "Мармеладные мишки с колой";
+        return "Конфетное ассорти";
     }
 }

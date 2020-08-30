@@ -1,24 +1,24 @@
 package Homework4;
 
-public class Cookies implements InterfaceTask4_2{
+public class Cookies implements NewYearGift {
 
     @Override
-    public void name() {
-
+    public String name() {
+        return "Печеньки";
     }
 
     @Override
-    public void weight() {
-
+    public double weight() {
+        return 0.9;
     }
 
     @Override
-    public void price() {
-
+    public int price() {
+        return 700;
     }
 
     @Override
-    public void uniqueParameter() {
-
+    public String uniqueParameter() {
+        return "Печеньки из коробки для хранения ниток";
     }
 }
