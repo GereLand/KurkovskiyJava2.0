@@ -23,13 +23,13 @@ public class Task7 {
 
         try {
             if ("+".equals(sign)) {
-                calculation.addition(operand1, operand2);
+                System.out.printf("Результат вычисления = " + ("%-10.2f%n%n"), calculation.addition(operand1, operand2));
             } else if ("-".equals(sign)) {
-                calculation.subtraction(operand1, operand2);
+                System.out.printf("Результат вычисления = " + ("%-10.2f%n%n"), calculation.subtraction(operand1, operand2));
             } else if ("*".equals(sign)) {
-                calculation.multiplication(operand1, operand2);
+                System.out.printf("Результат вычисления = " + ("%-10.2f%n%n"), calculation.multiplication(operand1, operand2));
             } else if ("/".equals(sign)) {
-                calculation.division(operand1, operand2);
+                System.out.printf("Результат вычисления = " + ("%-10.2f%n%n"), calculation.division(operand1, operand2));
             } else
                 System.out.print("Введено некорректное значение!");
         } catch (ArithmeticException e) {
